@@ -19,7 +19,7 @@ class Repository(object):
         if conf_file_path and os.path.exists(conf_file_path):
             _ = self.conf.read([conf_file_path])
         elif not force:
-            raise Exception("Configuration file missing")
+            raise Exception("Configuration file missing %s" % conf_file_path)
 
         if not force:
             version = int(self.conf.get("core", "repositoryformatversion"))
