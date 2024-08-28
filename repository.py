@@ -63,4 +63,6 @@ class RepositoryHelpers(object):
         )
 
         if parent_dir:
-            return RepositoryHelpers.get_gitdir_file_path(repo, *path)
+            return RepositoryHelpers.get_gitdir_joined_file_path(repo, *path)
+
+        return None
