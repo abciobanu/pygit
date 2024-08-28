@@ -15,7 +15,7 @@ class Repository(object):
 
         # Read the configuration file from the git directory
         self.conf = configparser.ConfigParser()
-        conf_file_path = RepositoryHelpers.get_gitdir_file_path(self, "config")
+        conf_file_path = RepositoryHelpers.get_gitdir_joined_file_path(self, "config")
         if conf_file_path and os.path.exists(conf_file_path):
             _ = self.conf.read([conf_file_path])
         elif not force:
