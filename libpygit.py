@@ -1,6 +1,7 @@
 import argparse
 import sys
 
+
 def main():
     args = sys.argv[1:]
 
@@ -16,4 +17,3 @@ def main():
         case _:
             print("Unknown command")
             sys.exit(1)
-
